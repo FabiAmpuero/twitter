@@ -1,0 +1,38 @@
+h1{
+    background: #e2e2e2;
+    font-size: 28px;
+    padding: 10px 0;
+    border-top: 1.5px solid #c6c6c6;
+    margin: 0 0 20px 0;
+}
+.boton{
+    position: relative;
+}
+.btn{
+    padding-left: 30px;
+}
+.texto{
+    margin: 0 auto;
+    margin-bottom: 10px;
+    max-width: 100%;
+    min-width: 100%;
+}
+.signo-mas{
+    position: absolute;
+    left: 10px;
+    top: 9px;
+    color: #fff;
+}
+.tarea{
+    background: #ccc;
+    padding: 10px 5px;
+    position: relative;
+}
+.tacho{
+    position: absolute;
+    right: 10px;
+    top: 14px;
+}
+.lista {
+    display: none;
+}
