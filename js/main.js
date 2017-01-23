@@ -11,7 +11,7 @@ function onButtonClick(evento){
 function agregarMensaje(){
     if (texto.value == null || texto.value.length == 0 || /^\s*$/.test(texto.value)){
         alert (texto.name+ ' no puede estar vacía o contener sólo espacios en blanco');
-        lista.removeChild(evento.target.parentNode);
+        lista.removeChild(this.parentNode);
     }
     var mensaje=texto.value;
     

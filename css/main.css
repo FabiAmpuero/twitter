@@ -33,9 +33,10 @@ h1{
     right: 10px;
     top: 14px;
 }
-/*.lista {
-    display: none;
-}*/
+.lista {
+    height: 200px;
+    overflow: auto;
+}
 #lista{
     list-style: none;
     padding: 0;
