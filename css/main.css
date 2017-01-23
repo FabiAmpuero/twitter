@@ -33,6 +33,16 @@ h1{
     right: 10px;
     top: 14px;
 }
-.lista {
+/*.lista {
     display: none;
+}*/
+#lista{
+    list-style: none;
+    padding: 0;
+}
+#lista li{
+    margin-bottom: 5px;
+}
+#lista .check{
+    margin: 2px 8px 0 5px;
 }
