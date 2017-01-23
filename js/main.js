@@ -10,11 +10,13 @@ function onButtonClick(evento){
 
 function agregarMensaje(){
     var mensaje=texto.value;
-    var item=document.createElement("li");
+    item=document.createElement("li");
     item.className="tarea";
     
-    var check=document.createElement("input");
-    var span=document.createElement("span");
+    /*variables globales*/
+    check=document.createElement("input");
+    span=document.createElement("span");
+    
     var icon=document.createElement("i");
     icon.style.cursor="pointer";
     check.setAttribute("type","checkbox");
@@ -31,22 +33,23 @@ function agregarMensaje(){
     texto.focus();
     
     icon.addEventListener("click", onIconClick);
+    check.addEventListener("click", onChange);   
 }
 
 function onIconClick(evento){
-    console.log(evento.target);
-    
+    console.log(evento.target.parentNode);
+    lista.removeChild(evento.target.parentNode);
 }
-/*
-function onChange(){
-    span.style.textDecoration="none";
-    if(span.style.textDecoration==="none"){
-        span.style.textDecoration="line-through";
+
+function onChange(evento){
+    console.log(evento.target);
+    if(evento.target.checked){
+        evento.target.nextSibling.style.textDecoration="line-through";
     } else{
-        span.style.textDecoration="none";
+        evento.target.nextSibling.style.textDecoration="none";
     }
 }
-*/
+
 
 
 
