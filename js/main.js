@@ -10,12 +10,12 @@ function onButtonClick(evento){
 
 function agregarMensaje(){
     var mensaje=texto.value;
-    item=document.createElement("li");
-    item.className="tarea";
     
-    /*variables globales*/
+    /*------------------------variables globales*/
     check=document.createElement("input");
     span=document.createElement("span");
+    item=document.createElement("li");
+    item.className="tarea";
     
     var icon=document.createElement("i");
     icon.style.cursor="pointer";
@@ -49,40 +49,3 @@ function onChange(evento){
         evento.target.nextSibling.style.textDecoration="none";
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*var boton=document.getElementById("boton");
-boton.onclick=function(){
-    var tarea=document.getElementById("texto");
-    if (tarea.value == null || tarea.value.length == 0 || /^\s*$/.test(tarea.value)){
-        alert (tarea.name+ ' no puede estar vacía o contener sólo espacios en blanco');
-    }
-    else{
-        var lista=document.getElementById("lista");
-        lista.style.display="block";
-        var nuevaTarea=document.getElementById("new");
-        nuevaTarea.innerHTML=tarea.value;
-        tarea.value="";
-        crear elementos al vuelo
-    }
-}*/
