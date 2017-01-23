@@ -13,9 +13,10 @@ function agregarMensaje(){
     var item=document.createElement("li");
     item.className="tarea";
     
-    check=document.createElement("input");
-    span=document.createElement("span");
+    var check=document.createElement("input");
+    var span=document.createElement("span");
     var icon=document.createElement("i");
+    icon.style.cursor="pointer";
     check.setAttribute("type","checkbox");
     check.className="check";
     icon.className="glyphicon glyphicon-trash tacho";
@@ -29,11 +30,14 @@ function agregarMensaje(){
     texto.value="";
     texto.focus();
     
-    check.addEventListener("click", onChange);
+    icon.addEventListener("click", onIconClick);
 }
 
-check.addEventListener("click", onChange);
-
+function onIconClick(evento){
+    console.log(evento.target);
+    
+}
+/*
 function onChange(){
     span.style.textDecoration="none";
     if(span.style.textDecoration==="none"){
@@ -42,6 +46,7 @@ function onChange(){
         span.style.textDecoration="none";
     }
 }
+*/
 
 
 
