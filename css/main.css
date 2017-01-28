@@ -31,7 +31,7 @@ h1{
 .tacho{
     position: absolute;
     right: 10px;
-    top: 8px;
+    top: 23px;
 }
 .lista {
     height: 200px;
@@ -49,8 +49,16 @@ h1{
 #lista li{
     margin-bottom: 5px;
 }
+#lista li span{
+    line-height: 15px;
+    display: inline-block;
+    position: relative;
+    bottom: 16px;
+}
 #lista .check{
     margin: 2px 8px 0 5px;
+    position: relative;
+    bottom: 14px;
 }
 
 #lista ol {
@@ -60,7 +68,7 @@ h1{
 #lista li{
     position: relative;
     display: block;
-    padding: .4em .4em .4em 2em;
+    padding: 2.4em .4em .4em 4em;
     *padding: .4em;
     margin: .5em 0;
     background: #ddd;
@@ -82,13 +90,13 @@ h1{
     content: counter(li);
     counter-increment: li;
     position: absolute; 
-    left: -1.3em;
-    top: 50%;
+    left: -0.3em;
+    top: 32%;
     margin-top: -1.3em;
     background: #87ceeb;
-    height: 2em;
-    width: 2em;
-    line-height: 2em;
+    height: 4em;
+    width: 4em;
+    line-height: 3.5em;
     border: .3em solid #fff;
     text-align: center;
     font-weight: bold;
