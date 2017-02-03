@@ -17,6 +17,9 @@ h1{
     max-width: 100%;
     min-width: 100%;
 }
+textarea .form-control{
+    height: 100px;
+}
 .signo-mas{
     position: absolute;
     left: 10px;
@@ -34,7 +37,7 @@ h1{
     top: 23px;
 }
 .lista {
-    height: 200px;
+    height: 250px;
     overflow: auto;
 }
 #lista{

@@ -2,25 +2,25 @@ var boton=document.getElementById("boton");
 boton.setAttribute("onclick","onButtonClick()");
 
 var listaTareas = [];
-listaTareas = [
-    {nombre:"Texto Uno",isDone:false},
-    {nombre:"Texto Dos",isDone:false}
-];
 
 function onButtonClick (){
     var lista = document.getElementById("lista");
     var texto=document.getElementById("texto");
-    
+    if(texto.value.length!=0){
     listaTareas.push({nombre:texto.value,isDone:false});
-    
+    texto.focus();
+    texto.value=""
     drawTasksList();
+    }else{
+        alert("ingresa una tarea");
+    }
 }
 
 function drawTasksList (){
     var lista = document.getElementById("lista");
     lista.innerHTML="";
     for(var i in listaTareas){
-        var html = "<li><input onclick='selectCheck("+i+")' type='checkbox' "+(listaTareas[i].isDone?"checked":"")+">"+"<span id='new'>"+listaTareas[i].nombre+"</span><i onclick='deleteSpan("+i+")' class='glyphicon glyphicon-trash tacho'></i></li>";
+        var html = "<li class='tarea'><input class='check' onclick='selectCheck("+i+")' type='checkbox' "+(listaTareas[i].isDone?"checked":"")+">"+"<span "+(listaTareas[i].isDone?"style='text-decoration:line-through'":"style='text-decoration:none'")+" id='new'>"+listaTareas[i].nombre+"</span><i onclick='removeSpan("+i+")' class='glyphicon glyphicon-trash tacho'></i></li>";
         
         lista.innerHTML += html;
     }
@@ -29,16 +29,48 @@ function drawTasksList (){
 function selectCheck (_index){
     if(listaTareas[_index].isDone==false){
         listaTareas[_index].isDone=true;
-        lista.childNodes[_index].childNodes[1].style.textDecoration="line-through";
     }else{
         listaTareas[_index].isDone=false;
-        lista.childNodes[_index].childNodes[1].style.textDecoration="none";
+    }
+    drawTasksList();
+}
+
+function removeSpan(_value){
+    listaTareas.splice(_value, 1);
+    drawTasksList();
+}
+/*
+function isMayus (){
+    var text=document.getElementById("texto");
+    var array=text.value.split("");
+    var first=array[0];
+    var upper=first.toUpperCase();
+    
+    
+    for(var i=1; i<array.length; i++) {
+        upper += array[i].toLowerCase();
+        text.value = upper;
     }
 }
 
-function deleteSpan(){
-    
+function sendTask(){
+    console.log("oli");
+    var textoo=document.getElementById("texto");
+    if(textoo.keyCode==13 && textoo.value.length!=0){
+        onButtonClick();
+        console.log("nopoi");
+    }
 }
+/*
+function removeSpan(_value){
+    console.log("oli");
+    var lista = document.getElementById("lista");
+    
+    lista.removeChild(lista.childNodes[_value]);
+    drawTasksList();
+}
+*/
+
 /*
 function selectCheck (){
     listaTareas[i].isDone==true;
