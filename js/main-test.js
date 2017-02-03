@@ -39,20 +39,19 @@ function removeSpan(_value){
     listaTareas.splice(_value, 1);
     drawTasksList();
 }
-/*
+
 function isMayus (){
     var text=document.getElementById("texto");
     var array=text.value.split("");
     var first=array[0];
     var upper=first.toUpperCase();
     
-    
     for(var i=1; i<array.length; i++) {
         upper += array[i].toLowerCase();
         text.value = upper;
     }
 }
-
+/*
 function sendTask(){
     console.log("oli");
     var textoo=document.getElementById("texto");
