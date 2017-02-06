@@ -39,6 +39,9 @@ function removeSpan(_value){
     listaTareas.splice(_value, 1);
     drawTasksList();
 }
+
+
+// tareas[pos].check = !tareas[pos].check; crearElementos();
 /*
 function isMayus (){
     var text=document.getElementById("texto");
