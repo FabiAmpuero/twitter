@@ -40,6 +40,10 @@ function removeSpan(_value){
     drawTasksList();
 }
 
+
+// tareas[pos].check = !tareas[pos].check; crearElementos();
+/*
+>>>>>>> master
 function isMayus (){
     var text=document.getElementById("texto");
     var array=text.value.split("");
